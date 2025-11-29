@@ -15,12 +15,10 @@ onMounted(async () => {
     );
     products.value = resp.data.products;
   } catch (err) {
-    console.log(err);
+    console.error(err);
   } finally {
     isLoading.value = false;
   }
-
-  console.log(products.value);
 });
 </script>
 

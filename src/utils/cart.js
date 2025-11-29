@@ -11,13 +11,7 @@ export function addToCart(product, qty) {
         return
     }
 
-    console.log("Product: ", product)
-    console.log("qty: ", qty)
-    console.log("cart: ", cart)
-
     const existingProduct = cart.find(item => item.product.id == product.id)
-
-    console.log("existingProduct: ", existingProduct)
 
     if (existingProduct) {
         existingProduct.quantity += qty
@@ -47,7 +41,6 @@ export function deleteProductFromCart(id) {
     if (!id && typeof id !== 'number') {
         return
     }
-    console.log("deletingid: ", id)
 
     const index = cart.findIndex(item => item.product.id === id)
 
