@@ -1,6 +1,6 @@
 <script setup>
 import { toRef } from "vue";
-import { addToCart, extractProductForCart } from "@/utils/cart";
+import { addToCart, extractProductForCart } from "@/composables/cart";
 
 const props = defineProps({
   product: {

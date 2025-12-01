@@ -1,6 +1,5 @@
 <script setup>
 import Appbar from "@/components/Appbar.vue";
-import ProductGrid from "@/components/ProductGrid.vue";
 import CartDrawer from "@/components/CartDrawer.vue";
 import { provide, ref } from "vue";
 
