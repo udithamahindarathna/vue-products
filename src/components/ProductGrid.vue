@@ -1,7 +1,6 @@
 <script setup>
 import { apiClient } from "@/utils/apiClient.js";
 import { ref, onMounted } from "vue";
-import Spinner from "@/components/Spinner.vue";
 import ProductItem from "@/components/ProductItem.vue";
 
 const products = ref([]);

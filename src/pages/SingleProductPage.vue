@@ -3,7 +3,7 @@ import { computed, onMounted, ref } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import { apiClient } from "@/utils/apiClient.js";
 import Review from "@/components/Review.vue";
-import { addToCart, extractProductForCart } from "@/utils/cart";
+import { addToCart, extractProductForCart } from "@/composables/cart";
 
 const route = useRoute();
 const router = useRouter();

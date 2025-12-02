@@ -1,5 +1,9 @@
 <script setup>
 import Cart from "@/components/Cart.vue";
+import { hideCartOnRoutes } from "@/composables/cart";
+import { useRoute } from "vue-router";
+
+const route = useRoute();
 </script>
 <template>
   <v-app-bar scroll-behaviour="elevate">
@@ -10,7 +14,7 @@ import Cart from "@/components/Cart.vue";
       </router-link>
     </template>
     <template v-slot:append>
-      <Cart />
+      <Cart v-if="!hideCartOnRoutes.includes(route.path)" />
     </template>
   </v-app-bar>
 </template>

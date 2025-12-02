@@ -1,6 +1,6 @@
 <script setup>
 import { inject } from "vue";
-import { getCartCount } from "@/utils/cart";
+import { getCartCount } from "@/composables/cart";
 
 const openCartDrawer = inject("openCartDrawer");
 </script>
