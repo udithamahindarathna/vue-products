@@ -1,11 +1,21 @@
-<script setup></script>
+<script setup>
+import Appbar from "@/components/Appbar.vue";
+import ProductGrid from "@/components/ProductGrid.vue";
+import CartDrawer from "@/components/CartDrawer.vue";
+import { provide, ref } from "vue";
+
+const openCartDrawer = ref(false);
+provide("openCartDrawer", openCartDrawer);
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <v-app>
+    <Appbar />
+    <CartDrawer v-model="openCartDrawer" location="right" />
+    <v-main class="d-flex align-center justify-center">
+      <v-container>
+        <router-view></router-view>
+      </v-container>
+    </v-main>
+  </v-app>
 </template>
-
-<style scoped></style>
